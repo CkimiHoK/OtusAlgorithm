@@ -1,0 +1,5 @@
+Test (1_strings\test.0.in). TRUE (Task result: 8 Expected: 8. Time: 0.0)
+Test (1_strings\test.1.in). TRUE (Task result: 64 Expected: 64. Time: 0.0)
+Test (1_strings\test.2.in). TRUE (Task result: 0 Expected: 0. Time: 0.0)
+Test (1_strings\test.3.in). TRUE (Task result: 1 Expected: 1. Time: 0.0)
+Test (1_strings\test.4.in). FALSE (Task result: 25 Expected: 26. Time: 0.0)
