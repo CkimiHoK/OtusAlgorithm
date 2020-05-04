@@ -1,0 +1,25 @@
+Spell 1:  col > row
+Spell 2:  col == row
+Spell 3:  col + row == 24
+Spell 4:  col + row < 30
+Spell 5:  col == 2 * row + 1 or col == 2 * row
+Spell 6:  col < 10 or row < 10
+Spell 7:  col > 15 and row > 15
+Spell 8:  col * row == 0
+Spell 9:  row - 10 > col or col > row + 10
+Spell 10: row < col < row * 2 + 2
+Spell 11: col == 1 or row == 1 or col == 23 or row == 23
+Spell 12: (row - 24) * (col - 24) >= 95
+Spell 13: 20 <= (col + row) <= 28
+Spell 14: row * col <= 100
+Spell 15: 9 < row - col < 21 or 9 < col - row < 21
+Spell 16: -10 < row - col < 10 and 14 < row + col < 34
+Spell 17: row < 8 * math.cos((col+9)/3) + 8
+Spell 18: (col < 2 or row < 2) and not col == row == 0
+Spell 19: col * row == 0 or col == 24 or row == 24
+Spell 20: (col + row % 2) % 2 == 0
+Spell 21: (col+1) % (row+1) == 1 or row == 0
+Spell 22: (col + row) % 3 == 0
+Spell 23: row % 3 == 0 and col % 2 == 0
+Spell 24: col == row or col + row == 24
+Spell 25: col % 6 == 0 or row % 6 == 0
