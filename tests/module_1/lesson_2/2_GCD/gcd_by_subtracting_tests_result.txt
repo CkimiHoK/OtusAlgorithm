@@ -1,0 +1,7 @@
+Test (2_GCD\test.0.in). TRUE (Task result: 10 Expected: 10. Time: 0.000011)
+Test (2_GCD\test.1.in). TRUE (Task result: 1 Expected: 1. Time: 0.000011)
+Test (2_GCD\test.2.in). TRUE (Task result: 1 Expected: 1. Time: 6.800738)
+Test (2_GCD\test.3.in). TRUE (Task result: 6 Expected: 6. Time: 10.962122)
+Test (2_GCD\test.4.in). TRUE (Task result: 9 Expected: 9. Time: 0.145361)
+Test (2_GCD\test.5.in). TRUE (Task result: 1 Expected: 1. Time: 0.106623)
+Test (2_GCD\test.9.in). TRUE (Task result: 608281864034267560872252163321295376887552831379210240000000000 Expected: 608281864034267560872252163321295376887552831379210240000000000. Time: 0.000012)

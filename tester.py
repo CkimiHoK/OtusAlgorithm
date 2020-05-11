@@ -16,11 +16,12 @@ def test_task(path, task, log_file_name=default_log_file_name):
     result_log = ''
     for test_case in test_cases:
         with open(test_case, 'r') as case_input:  # get test case info from .in file
+            print(f'Start test for input: {case_input.name}')
             lines = [line.strip() for line in case_input.readlines()]
 
-            start_time = time.time()
+            start_time = time.perf_counter()
             task_result = task(lines)  # start task
-            end_time = time.time()
+            end_time = time.perf_counter()
 
             is_test_success = False
             try:
@@ -30,13 +31,13 @@ def test_task(path, task, log_file_name=default_log_file_name):
                     result_log += f'Test ({test_case}). {str(is_test_success).upper()} (' \
                         f'Task result: {task_result} ' \
                         f'Expected: {expected_result}. ' \
-                        f'Time: {end_time - start_time})\n'
+                        f'Time: {(end_time - start_time):.6f})\n'
             except IOError:
                 expected_result = "*Can't found test case output file*"
                 result_log += f'Test ({test_case}). {is_test_success} ' \
                     f'Task result: {task_result} ' \
                     f'Expected: {expected_result}. ' \
-                    f'Time: {end_time - start_time})\n'
+                    f'Time: {(end_time - start_time):.6f})\n'
 
     try:
         print(result_log)  # write log to console
