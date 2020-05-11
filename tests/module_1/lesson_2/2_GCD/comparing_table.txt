@@ -6,9 +6,9 @@ test.2.in         |   0.000013 |   0.000004 |  16.401521
 test.3.in         |   0.000013 |   0.000004 |  26.735704
 test.4.in         |   0.000016 |   0.000004 |   0.353479
 test.5.in         |   0.000014 |   0.000004 |   0.276533
-test.6.in         |   0.000048 |   0.000010 |   TOO LOW (Over 10 minutes)
-test.7.in         |   0.000090 |   0.000017 |   TOO LOW (Over 10 minutes)
-test.8.in         |   0.000082 |   0.000017 |   TOO LOW (Over 10 minutes)
+test.6.in         |   0.000048 |   0.000010 |   TOO SLOW (Over 10 minutes)
+test.7.in         |   0.000090 |   0.000017 |   TOO SLOW (Over 10 minutes)
+test.8.in         |   0.000082 |   0.000017 |   TOO SLOW (Over 10 minutes)
 test.9.in         |   0.000035 |   0.000005 |   0.000012
 
 BEST OF THREE - Calculate GCD using Euclidean algorithm by remains

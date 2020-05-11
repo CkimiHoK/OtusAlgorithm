@@ -1,0 +1,20 @@
+TEST \ ALGORITHM  |    RECURSION  |   ITERATIONS  |  GOLDEN_SEC  |    MATRIX  
+------------------------------------------------------------------------------
+test.00.in        |     0.000014  |     0.000025  |    0.000008  |    0.000012
+test.01.in        |     0.000006  |     0.000013  |    0.000002  |    0.000009
+test.02.in        |     0.000005  |     0.000013  |    0.000002  |    0.000010
+test.03.in        |     0.000005  |     0.000015  |    0.000013  |    0.000012
+test.04.in        |     0.000006  |     0.000015  |    0.000005  |    0.000011
+test.05.in        |     0.000022  |     0.000017  |    0.000005  |    0.000013
+test.06.in        |     0.000012  |     0.000017  |    0.000005  |    0.000015
+test.07.in        |     0.000069  |     0.000047  |    0.000005  |    0.000027
+test.08.in        |    STACK_OVER |     0.000599  |    0.000009  |    0.000066
+test.09.in        |    STACK_OVER |     0.032748  |  FLOAT_OVER  |    0.001967
+test.10.in        |    STACK_OVER |     1.386803  |  FLOAT_OVER  |    0.093984
+test.11.in        |    STACK_OVER |   140.139667  |  FLOAT_OVER  |    5.208623
+test.12.in        |    STACK_OVER |     TOO SLOW  |  FLOAT_OVER  |  422.416248
+test.13.in        |    STACK_OVER |     TOO SLOW  |  FLOAT_OVER  |    TOO SLOW
+test.14.in        |    STACK_OVER |     TOO SLOW  |  FLOAT_OVER  |    TOO SLOW
+
+
+

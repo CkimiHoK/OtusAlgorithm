@@ -1,0 +1,8 @@
+Test (4_Fibo\test.00.in). False Task result: 1 Expected: *Can't found test case output file*. Time: 0.000014)
+Test (4_Fibo\test.01.in). False Task result: 1 Expected: *Can't found test case output file*. Time: 0.000006)
+Test (4_Fibo\test.02.in). False Task result: 1 Expected: *Can't found test case output file*. Time: 0.000005)
+Test (4_Fibo\test.03.in). False Task result: 2 Expected: *Can't found test case output file*. Time: 0.000005)
+Test (4_Fibo\test.04.in). False Task result: 3 Expected: *Can't found test case output file*. Time: 0.000006)
+Test (4_Fibo\test.05.in). False Task result: 5 Expected: *Can't found test case output file*. Time: 0.000022)
+Test (4_Fibo\test.06.in). False Task result: 55 Expected: *Can't found test case output file*. Time: 0.000012)
+Test (4_Fibo\test.07.in). False Task result: 354224848179261915075 Expected: *Can't found test case output file*. Time: 0.000069)
