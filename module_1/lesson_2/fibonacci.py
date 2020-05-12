@@ -70,3 +70,31 @@ def fibonacci_by_matrix(str_array):
 
     result = matrix_power(position)[1][0]
     return str(result)
+
+
+def fibonacci_by_matrix_refactoring(str_array):
+    """ Calculate fibonacci number in N position by matrix multiply """
+    position = int(str_array[0])
+
+    def multiplier(a, b):
+        """ Multiplier for 2x2 matrix """
+        d = a[0][0] * b[0][1] + a[0][1] * b[1][1]
+        return [[a[0][0] * b[0][0] + a[0][1] * b[1][0], d],
+                [d, a[1][0] * b[0][1] + a[1][1] * b[1][1]]]
+
+    def matrix_power(power):
+        """ Raising the matrix to a power """
+        base_matrix = [[1, 1],
+                       [1, 0]]
+        result_matrix = [[1, 0],
+                         [0, 1]]
+
+        while power:  # Use binary decomposition
+            if power % 2 == 1:
+                result_matrix = multiplier(result_matrix, base_matrix)
+            base_matrix = multiplier(base_matrix, base_matrix)
+            power //= 2
+        return result_matrix
+
+    result = matrix_power(position)[1][0]
+    return str(result)
