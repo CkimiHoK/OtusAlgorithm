@@ -28,16 +28,16 @@ def test_task(path, task, log_file_name=default_log_file_name):
                 with open(test_case.replace('.in', '.out'), 'r') as case_output:  # get expected result from .out file
                     expected_result = case_output.read().strip()
                     is_test_success = task_result == expected_result
-                    result_log += f'Test ({test_case}). {str(is_test_success).upper()} (' \
-                        f'Task result: {task_result} ' \
-                        f'Expected: {expected_result}. ' \
-                        f'Time: {(end_time - start_time):.6f})\n'
+                    result_log += f'TEST ({test_case}). {str(is_test_success).upper()}' \
+                        f'\nTask result:\n{task_result}' \
+                        f'\nExpected:\n{expected_result}' \
+                        f'\nTime: {(end_time - start_time):.6f}\n\n'
             except IOError:
                 expected_result = "*Can't found test case output file*"
-                result_log += f'Test ({test_case}). {is_test_success} ' \
-                    f'Task result: {task_result} ' \
-                    f'Expected: {expected_result}. ' \
-                    f'Time: {(end_time - start_time):.6f})\n'
+                result_log += f'TEST ({test_case}). {str(is_test_success).upper()}' \
+                    f'\nTask result:\n{task_result}' \
+                    f'\nExpected:\n{expected_result}' \
+                    f'\nTime: {(end_time - start_time):.6f}\n\n'
 
     try:
         print(result_log)  # write log to console
