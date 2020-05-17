@@ -1,0 +1,90 @@
+TEST (2_knight\test.0.in). TRUE
+Task result:
+2
+132096
+Expected:
+2
+132096
+Time: 0.000036
+
+TEST (2_knight\test.1.in). TRUE
+Task result:
+3
+329728
+Expected:
+3
+329728
+Time: 0.000020
+
+TEST (2_knight\test.2.in). TRUE
+Task result:
+4
+659712
+Expected:
+4
+659712
+Time: 0.000021
+
+TEST (2_knight\test.3.in). TRUE
+Task result:
+8
+11333767002587136
+Expected:
+8
+11333767002587136
+Time: 0.000021
+
+TEST (2_knight\test.4.in). TRUE
+Task result:
+4
+4620693356194824192
+Expected:
+4
+4620693356194824192
+Time: 0.000026
+
+TEST (2_knight\test.5.in). TRUE
+Task result:
+3
+288234782788157440
+Expected:
+3
+288234782788157440
+Time: 0.000019
+
+TEST (2_knight\test.6.in). TRUE
+Task result:
+4
+1152939783987658752
+Expected:
+4
+1152939783987658752
+Time: 0.000019
+
+TEST (2_knight\test.7.in). TRUE
+Task result:
+3
+2305878468463689728
+Expected:
+3
+2305878468463689728
+Time: 0.000017
+
+TEST (2_knight\test.8.in). TRUE
+Task result:
+2
+1128098930098176
+Expected:
+2
+1128098930098176
+Time: 0.000025
+
+TEST (2_knight\test.9.in). TRUE
+Task result:
+2
+9077567998918656
+Expected:
+2
+9077567998918656
+Time: 0.000016
+
