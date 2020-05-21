@@ -1,0 +1,14 @@
+TEST (1_add\test_1.in). FALSE
+Task result:
+Time: 0.000023
+Expected:
+*Can't found test case output file*
+Time: 0.000028
+
+TEST (1_add\test_2.in). FALSE
+Task result:
+Time: 0.000004
+Expected:
+*Can't found test case output file*
+Time: 0.000007
+

@@ -24,20 +24,32 @@ class IArray(ABC):
 
 
 class SingleArray(IArray):
+    def __init__(self):
+        self.__array = []
+        self.__size = 0
+
     def get_size(self):
-        pass
+        return self.__array.__len__()
 
     def add(self, item):
-        pass
+        self.__resize()
+        self.__array[self.get_size() - 1] = item
 
     def get(self, index):
-        pass
+        if 0 < index < self.get_size():
+            return self.__array[index]
 
     def remove(self, index):
         pass
 
     def insert(self, item, index):
         pass
+
+    def __resize(self):
+        new_array = [None for _ in range(self.get_size() + 1)]
+        for index in range(self.get_size()):
+            new_array[index] = self.__array[index]
+        self.__array = new_array
 
 
 class VectorArray(IArray):
