@@ -1,14 +1,14 @@
-TEST (2_get\test_1.in). FALSE
+TEST (1_add\test_1.in). FALSE
 Task result:
-Time: 0.000011
+Time: 0.000003
 Expected:
 *Can't found test case output file*
-Time: 0.000016
+Time: 0.000023
 
-TEST (2_get\test_2.in). FALSE
+TEST (1_add\test_2.in). FALSE
 Task result:
-Time: 0.000024
+Time: 0.000006
 Expected:
 *Can't found test case output file*
-Time: 0.000028
+Time: 0.000010
 

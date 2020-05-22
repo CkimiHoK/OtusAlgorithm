@@ -2,88 +2,83 @@ from abc import ABC, abstractmethod
 
 
 class IArray(ABC):
-    @abstractmethod
+    def __init__(self):
+        self.array = []
+        self.size = 0
+
     def get_size(self):
-        pass
+        return self.size
 
-    @abstractmethod
     def add(self, item):
-        pass
+        if self.size >= self.array.__len__():  # resize internal array if need
+            self.resize()
+        self.array[self.size] = item
+        self.size += 1
 
-    @abstractmethod
     def get(self, index):
-        pass
+        if 0 <= index < self.get_size():
+            return self.array[index]
+        else:
+            raise IndexError
 
-    @abstractmethod
     def remove(self, index):
-        pass
+        if 0 <= index < self.get_size():
+            item = self.array[index]  # get item
+            for i in range(index, self.size - 1):  # move elements to the left
+                self.array[i] = self.array[i + 1]
+            self.array[self.size - 1] = None  # drop last element
+            self.size -= 1
+            return item
+        else:
+            raise IndexError
+
+    def insert(self, item, index):
+        if self.size >= self.array.__len__():  # resize internal array if need
+            self.resize()
+        if 0 <= index < self.get_size() or index == 0:
+            for i in range(self.size, index, -1):  # move elements to the right
+                self.array[i] = self.array[i - 1]
+            self.array[index] = item  # insert element
+            self.size += 1
+        else:
+            raise IndexError
 
     @abstractmethod
-    def insert(self, item, index):
+    def resize(self):
         pass
 
 
 class SingleArray(IArray):
-    def __init__(self):
-        self.__array = []
-        self.__size = 0
-
-    def get_size(self):
-        return self.__array.__len__()
-
-    def add(self, item):
-        self.__resize()
-        self.__array[self.get_size() - 1] = item
-
-    def get(self, index):
-        if 0 < index < self.get_size():
-            return self.__array[index]
-
-    def remove(self, index):
-        pass
-
-    def insert(self, item, index):
-        pass
-
-    def __resize(self):
-        new_array = [None for _ in range(self.get_size() + 1)]
+    def resize(self):
+        new_array = [None for _ in range(self.get_size() + 1)]  # increment by 1
         for index in range(self.get_size()):
-            new_array[index] = self.__array[index]
-        self.__array = new_array
+            new_array[index] = self.array[index]
+        self.array = new_array
 
 
 class VectorArray(IArray):
-    def get_size(self):
-        pass
+    def __init__(self, vector=10):
+        super().__init__()
+        self.vector = vector
 
-    def add(self, item):
-        pass
-
-    def get(self, index):
-        pass
-
-    def remove(self, index):
-        pass
-
-    def insert(self, item, index):
-        pass
+    def resize(self):
+        new_array = [None for _ in range(self.get_size() + self.vector)]  # increment by vector size
+        for index in range(self.get_size()):
+            new_array[index] = self.array[index]
+        self.array = new_array
 
 
 class FactorArray(IArray):
-    def get_size(self):
-        pass
+    def __init__(self, multiplier=2):
+        super().__init__()
+        self.array = [None]  # we need to initiate array at least 1 element
+        self.multiplier = multiplier
 
-    def add(self, item):
-        pass
-
-    def get(self, index):
-        pass
-
-    def remove(self, index):
-        pass
-
-    def insert(self, item, index):
-        pass
+    def resize(self):
+        new_array = [None for _ in range(self.get_size() * self.multiplier)]  # multiply by self.multiplier size
+        for index in range(self.get_size()):
+            new_array[index] = self.array[index]
+        self.array = new_array
 
 
 class MatrixArray(IArray):
@@ -101,3 +96,26 @@ class MatrixArray(IArray):
 
     def insert(self, item, index):
         pass
+
+    def resize(self):
+        pass
+
+
+class StandartArrayWrapper(IArray):
+    def get_size(self):
+        return len(self.array)
+
+    def add(self, item):
+        self.array.append(item)
+
+    def get(self, index):
+        return self.array[index]
+
+    def remove(self, index):
+        return self.array.pop(index)
+
+    def insert(self, item, index):
+        self.array.insert(index, item)
+
+    def resize(self):
+        pass  # not need to realize this method
