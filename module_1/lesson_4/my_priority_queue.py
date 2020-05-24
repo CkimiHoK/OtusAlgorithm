@@ -1,11 +1,11 @@
-class Node:
+class Node:  # Node element for my deque
     def __init__(self, item, prev_node=None, next_node=None):
         self.item = item
         self.prev_node = prev_node
         self.next_node = next_node
 
 
-class MyDeque:
+class MyDeque:  # mu own deque structure
     def __init__(self):
         self.head = None
         self.tail = None
@@ -31,36 +31,48 @@ class MyDeque:
         return result
 
 
+class PriorityItem:  # link priority with internal deque
+    def __init__(self, priority, deque):
+        self.priority = priority
+        self.deque = deque
+
+
 class MyPriorityQueue:
+    def __init__(self):
+        self.__priority_arr = []  # array of PriorityItem elements
+
     def enqueue(self, priority, item):
-        pass
+        priority_index, is_new = self.__find_priority_index(priority)  # we need to know: is priority item exists ?
+
+        if is_new:  # add new priority type with internal deque
+            new_deque = MyDeque()
+            new_deque.enqueue(item)
+            self.__priority_arr.insert(priority_index, PriorityItem(priority, new_deque))
+        else:
+            self.__priority_arr[priority_index].deque.enqueue(item)
 
     def dequeue(self):
-        pass
+        result = None
+        while result is None:
+            if self.__priority_arr.__len__() <= 0:
+                break
+            result = self.__priority_arr[0].deque.dequeue()  # get first element
+            if result is None:  # delete empty priorities
+                self.__priority_arr.pop(0)
+        return result
 
+    def __find_priority_index(self, priority):
+        return self.__binary_search(priority, 0, self.__priority_arr.__len__() - 1)
 
-print("let's go")
-
-n = Node("first")
-n_2 = Node("second")
-n_3 = Node("third", n, n_2)
-
-print(f'{n_3.item} - {n_3.prev_node.item} - {n_3.next_node.item}')
-
-deque = MyDeque()
-deque.enqueue("one")
-deque.enqueue("two")
-deque.enqueue("three")
-deque.enqueue("four")
-deque.enqueue("five")
-deque.enqueue("one")
-deque.enqueue("two")
-deque.enqueue("three")
-deque.enqueue("four")
-deque.enqueue("five")
-
-for _ in range(50):
-    item = deque.dequeue()
-    print(item)
-    if item is None:
-        break
+    def __binary_search(self, priority, from_index, to_index):  # find index for priority position
+        if from_index > to_index:
+            return from_index, True
+        else:
+            middle_index = (from_index + to_index) // 2
+            middle_element = self.__priority_arr[middle_index].priority
+            if priority == middle_element:
+                return middle_index, False
+            elif priority > middle_element:
+                return self.__binary_search(priority, middle_index + 1, to_index)
+            elif priority < middle_element:
+                return self.__binary_search(priority, from_index, middle_index - 1)
