@@ -1,0 +1,35 @@
+TEST (4_insert\test_1.in). FALSE
+Task result:
+Time: 0.000040
+Expected:
+*Can't found test case output file*
+Time: 0.000063
+
+TEST (4_insert\test_2.in). FALSE
+Task result:
+Time: 0.000241
+Expected:
+*Can't found test case output file*
+Time: 0.000253
+
+TEST (4_insert\test_3.in). FALSE
+Task result:
+Time: 0.015638
+Expected:
+*Can't found test case output file*
+Time: 0.015656
+
+TEST (4_insert\test_4.in). FALSE
+Task result:
+Time: 1.494133
+Expected:
+*Can't found test case output file*
+Time: 1.494154
+
+TEST (4_insert\test_5.in). FALSE
+Task result:
+Time: 154.668769
+Expected:
+*Can't found test case output file*
+Time: 154.668804
+

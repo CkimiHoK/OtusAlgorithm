@@ -82,23 +82,65 @@ class FactorArray(IArray):
 
 
 class MatrixArray(IArray):
+    def __init__(self, sub_array_size=100):
+        super().__init__()
+        self.array = FactorArray()
+        self.size = 0
+        self.__sub_arr_size = sub_array_size if sub_array_size > 0 else 100
+
     def get_size(self):
-        pass
+        return self.size
 
     def add(self, item):
-        pass
+        if self.size >= self.array.get_size() * self.__sub_arr_size:  # resize internal array if need
+            self.resize()
+        ind_1, ind_2 = self.__get_indexes(self.size)
+        self.array.get(ind_1)[ind_2] = item
+        self.size += 1
 
     def get(self, index):
-        pass
+        if 0 <= index < self.get_size():
+            ind_1, ind_2 = self.__get_indexes(index)
+            return self.array.get(ind_1)[ind_2]
+        else:
+            raise IndexError
 
     def remove(self, index):
-        pass
+        if 0 <= index < self.get_size():
+            item = self.get(index)  # get item
+
+            for i in range(index, self.size - 1):  # move elements to the left
+                ind_1, ind_2 = self.__get_indexes(i)
+                ind_3, ind_4 = self.__get_indexes(i + 1)
+                self.array.get(ind_1)[ind_2] = self.array.get(ind_3)[ind_4]
+
+            ind_1, ind_2 = self.__get_indexes(self.size - 1)
+            self.array.get(ind_1)[ind_2] = None   # drop last element
+            self.size -= 1
+            return item
+        else:
+            raise IndexError
 
     def insert(self, item, index):
-        pass
+        if self.size >= self.array.get_size() * self.__sub_arr_size:  # resize internal array if need
+            self.resize()
+        if 0 <= index < self.get_size() or index == 0:
+            for i in range(self.size, index, -1):  # move elements to the right
+                ind_1, ind_2 = self.__get_indexes(i)
+                ind_3, ind_4 = self.__get_indexes(i - 1)
+                self.array.get(ind_1)[ind_2] = self.array.get(ind_3)[ind_4]
+            ind_1, ind_2 = self.__get_indexes(index)
+            self.array.get(ind_1)[ind_2] = item  # insert element
+            self.size += 1
+        else:
+            raise IndexError
 
     def resize(self):
-        pass
+        new_array = [None for _ in range(self.__sub_arr_size)]
+        self.array.add(new_array)
+
+    def __get_indexes(self, index):
+        return int(index / self.__sub_arr_size), index % self.__sub_arr_size
 
 
 class StandartArrayWrapper(IArray):

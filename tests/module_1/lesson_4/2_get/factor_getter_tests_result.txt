@@ -1,14 +1,56 @@
 TEST (2_get\test_1.in). FALSE
 Task result:
-Time: 0.000011
+Time: 0.000028
 Expected:
 *Can't found test case output file*
-Time: 0.000016
+Time: 0.000062
 
 TEST (2_get\test_2.in). FALSE
 Task result:
-Time: 0.000025
+Time: 0.000014
 Expected:
 *Can't found test case output file*
-Time: 0.000029
+Time: 0.000075
+
+TEST (2_get\test_3.in). FALSE
+Task result:
+Time: 0.000012
+Expected:
+*Can't found test case output file*
+Time: 0.000231
+
+TEST (2_get\test_4.in). FALSE
+Task result:
+Time: 0.000018
+Expected:
+*Can't found test case output file*
+Time: 0.002492
+
+TEST (2_get\test_5.in). FALSE
+Task result:
+Time: 0.000021
+Expected:
+*Can't found test case output file*
+Time: 0.021871
+
+TEST (2_get\test_6.in). FALSE
+Task result:
+Time: 0.000030
+Expected:
+*Can't found test case output file*
+Time: 0.214827
+
+TEST (2_get\test_7.in). FALSE
+Task result:
+Time: 0.000035
+Expected:
+*Can't found test case output file*
+Time: 2.604163
+
+TEST (2_get\test_8.in). FALSE
+Task result:
+Time: 0.000045
+Expected:
+*Can't found test case output file*
+Time: 23.916505
 

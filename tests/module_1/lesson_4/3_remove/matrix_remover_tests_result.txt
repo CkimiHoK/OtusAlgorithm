@@ -1,0 +1,56 @@
+TEST (3_remove\test_1.in). FALSE
+Task result:
+Time: 0.000015
+Expected:
+*Can't found test case output file*
+Time: 0.000072
+
+TEST (3_remove\test_2.in). FALSE
+Task result:
+Time: 0.000037
+Expected:
+*Can't found test case output file*
+Time: 0.000114
+
+TEST (3_remove\test_3.in). FALSE
+Task result:
+Time: 0.000301
+Expected:
+*Can't found test case output file*
+Time: 0.000823
+
+TEST (3_remove\test_4.in). FALSE
+Task result:
+Time: 0.003200
+Expected:
+*Can't found test case output file*
+Time: 0.007624
+
+TEST (3_remove\test_5.in). FALSE
+Task result:
+Time: 0.026926
+Expected:
+*Can't found test case output file*
+Time: 0.069896
+
+TEST (3_remove\test_6.in). FALSE
+Task result:
+Time: 0.356558
+Expected:
+*Can't found test case output file*
+Time: 0.838815
+
+TEST (3_remove\test_7.in). FALSE
+Task result:
+Time: 3.047934
+Expected:
+*Can't found test case output file*
+Time: 8.069930
+
+TEST (3_remove\test_8.in). FALSE
+Task result:
+Time: 29.629236
+Expected:
+*Can't found test case output file*
+Time: 78.112262
+
