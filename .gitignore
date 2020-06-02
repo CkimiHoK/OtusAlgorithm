@@ -130,3 +130,7 @@ dmypy.json
 
 # PyCharm
 .idea
+
+# Some big files
+tests/module_2/lesson_5_6/**/*.in
+tests/module_2/lesson_5_6/**/*.out
